@@ -2,93 +2,106 @@
 /****-----start-body----****/
 * {
     box-sizing: border-box;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    font-family: "Signika Negative", sans-serif;
 }
 
-/* body{
-	background-color:#86B4CC;
-} */
+body {
+    background: rgba(25, 70, 85, 0.2);
+	font-weight: 400;
+    line-height: 1.5;
+	position: relative;
+}
+
+/* Container Div */
+#container {
+	position: absolute;
+	margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+	width: 45%;
+	height: 304px;
+	margin-top: 24px;
+	background-color: #f8f9fa;
+    padding: 16px 15px;
+}
 
 .parent {
-	width: 40%;
-	margin: 100px auto;
+	width: 100%;
+	height: 270px;
 	background: #fff;
-	padding: 2rem 2rem;
+	padding: 1.25rem;
 	border-radius: 0.3rem;
-	box-shadow: 0px 0px 8px 4px  #787878;
+	box-shadow: 2px 1.5px 3px 2.5px;
 }
 
+/* Label Style */
 form span {
 	display: block;
-	font-size: 1rem;
-	color: #787878;
-	padding-bottom: 5px;
-	font-weight: 600;
-	font-family: 'Open Sans', sans-serif;
+    margin-bottom: .5rem;
+	color: #212529;
+    margin: 0px 0px 8px;
+	font-size: 16px;
+    font-weight: 500;
 }
+
+/* Username & Password Style */
 input[type="text"],input[type="Password"] {
-	padding: 9px;
-	width: 90%;
-	font-size: 1.1rem;
-	margin: 18px 0px;
-	border: 2px solid#EAEEF1;
-	color: #666666;
-	background:#EAEEF1;
-	font-family: 'Open Sans', sans-serif;
-	font-weight:600;
-	margin-left: 5px;
-	outline:none;
-}
-input[type="text"]:hover,input[type="Password"]:hover,#active{
-	background:#fff;
-	border:2px solid #609EC3;
-	outline:none;
-}
-.sign {
-	padding: 10px 0;
-}
-.forget-pass {
-	float: right;
-}
-.submit {
-	padding: 2px 2px;
-	float:left;
-	margin-right: 11px;
-}
-.submit input[type="submit"] {
-	background: #F06B37;
-	border: none;
+	width: 100%;
+	margin: 1px 0px;
+    padding: 10px 18px;
+    font-size: 1rem;
+    color: #495057;
+	border: 1px solid #ced4da; 
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
 	outline: none;
-	padding: 0.55rem 1.3rem 0.6rem;
+}
+
+input[type="Password"]:focus{
+	color: #495057;
+	border: 1px solid #80bdff;
+	box-shadow: 0 0 0 0.2rem rgb(0 123 255 / 25%);
+}
+
+input[type="text"]:focus{
+	color: #495057;
+	border: 1px solid #80bdff;
+	box-shadow: 0 0 0 0.2rem rgb(0 123 255 / 25%);
+}
+
+/* Button Style */
+.submit input[type="submit"] {
+	display: inline-block;
+    width: 100%;
+	height: 58px;
 	cursor: pointer;
-	font-family: 'Open Sans', sans-serif;
-	color: #FFF;
+	margin-top: 5px;
 	font-size: 0.9rem;
 	border-radius: 5px;
-	font-weight: 600;
+    border: 1px solid #343a40;
+    text-align: center;
+	padding: 1rem;
+    color: #343a40;
 }
 .submit input[type="submit"]:hover{
-	background:#62A0C4;
+	color: #fff;
+    background-color: #343a40;
+    border-color: #343a40;
 }
 
-.forget-pass a {
-	float: right;
-	color:#609EC3;
-	font-size: 0.95rem;
-	margin-top: 13px;
-	font-weight: 600;
-	font-family: 'Open Sans', sans-serif;
-	text-decoration: none;
 
-}
-.forget-pass a:hover {
-	text-decoration: underline;
-}
-
-/*----start-responsive design-----*/
+/*----For-responsive design-----*/
 @media (max-width:1280px){
+	#container {
+		width: 90%;
+		height: 304px;
+		background-color: #f8f9fa;
+		/* margin: 24px 400px; */
+		padding: 16px 15px;
+	}
     .parent {
-		width: 80%;
+		height: 270px;
 	}
 	input[type="text"], input[type="Password"] {
 	padding: 9px;		
@@ -97,35 +110,28 @@ input[type="text"]:hover,input[type="Password"]:hover,#active{
 }
 
 @media (max-width:320px){
+    #container {
+		width: 100%;
+		height: 304px;
+		background-color: #f8f9fa;
+		/* margin: 24px 400px; */
+		padding: 16px 15px;
+	}
 	.parent {
-		width: 80%;
+		width: 100%;
 	}
 	.submit{
 	padding: 2px ;
 	text-align: center;
-	float:none;
 	}
-	.forget-pass {
-	float:none;
-	text-align:center;
-	margin-top: 15px
-	}
-	.forget-pass a {
-	float:none;
-	}
+	
 	input[type="text"], input[type="Password"] {
 	padding: 6px;
 	margin: 9px 0px;
+	width: 100%;
 	}
 	
 }
-
-
-
-
-
-
-
 
 
 
