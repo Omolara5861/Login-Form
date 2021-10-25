@@ -1,5 +1,5 @@
-
 /****-----start-body----****/
+
 * {
     box-sizing: border-box;
     font-family: "Signika Negative", sans-serif;
@@ -7,137 +7,160 @@
 
 body {
     background: rgba(25, 70, 85, 0.2);
-	font-weight: 400;
+    font-weight: 400;
     line-height: 1.5;
-	position: relative;
+    position: relative;
 }
 
+
 /* Container Div */
+
 #container {
-	position: absolute;
-	margin-left: auto;
+    position: absolute;
+    margin-left: auto;
     margin-right: auto;
     left: 0;
     right: 0;
-	width: 45%;
-	height: 304px;
-	margin-top: 24px;
-	background-color: #f8f9fa;
+    width: 45%;
+    height: 304px;
+    margin-top: 24px;
     padding: 16px 15px;
+    margin-top: 120px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 4px rgb(160, 159, 159);
 }
 
 .parent {
-	width: 100%;
-	height: 270px;
-	background: #fff;
-	padding: 1.25rem;
-	border-radius: 0.3rem;
-	box-shadow: 2px 1.5px 3px 2.5px;
+    width: 100%;
+    height: 270px;
+    padding: 1.25rem;
+    border-radius: 0.3rem;
 }
 
+
 /* Label Style */
+
 form span {
-	display: block;
+    display: block;
     margin-bottom: .5rem;
-	color: #212529;
+    color: #212529;
     margin: 0px 0px 8px;
-	font-size: 16px;
+    font-size: 16px;
     font-weight: 500;
 }
 
+
 /* Username & Password Style */
-input[type="text"],input[type="Password"] {
-	width: 100%;
-	margin: 1px 0px;
-    padding: 10px 18px;
+
+input[type="text"],
+input[type="Password"] {
+    width: 100%;
     font-size: 1rem;
     color: #495057;
-	border: 1px solid #ced4da; 
+    border: 1px solid #ced4da;
     border-radius: .25rem;
     transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
-	outline: none;
+    outline: none;
 }
 
-input[type="Password"]:focus{
-	color: #495057;
-	border: 1px solid #80bdff;
-	box-shadow: 0 0 0 0.2rem rgb(0 123 255 / 25%);
+input[type="Password"]:focus {
+    border: 1.7px solid #80bdff;
 }
 
-input[type="text"]:focus{
-	color: #495057;
-	border: 1px solid #80bdff;
-	box-shadow: 0 0 0 0.2rem rgb(0 123 255 / 25%);
+input[type="text"]:focus {
+    color: #495057;
+    border: 1.7px solid #80bdff;
 }
+
+.sign {
+    display: grid;
+    place-items: center;
+    margin-top: 20px;
+}
+
 
 /* Button Style */
+
 .submit input[type="submit"] {
-	display: inline-block;
-    width: 100%;
-	height: 58px;
-	cursor: pointer;
-	margin-top: 5px;
-	font-size: 0.9rem;
-	border-radius: 5px;
+    display: grid;
+    place-content: center;
+    height: 38px;
+    width: 120px;
+    cursor: pointer;
+    margin-top: 20px;
+    font-size: 0.9rem;
     border: 1px solid #343a40;
     text-align: center;
-	padding: 1rem;
     color: #343a40;
+    margin-top: 20px;
+    background: rgb(58, 57, 57);
+    color: white;
+    border-radius: 10px;
+    box-shadow: 1px 1px 1px rgb(63, 62, 62);
+    transition: all 0.7s;
 }
-.submit input[type="submit"]:hover{
-	color: #fff;
-    background-color: #343a40;
+
+.submit input[type="submit"]:hover {
+    color: #fff;
+    background-color: black;
     border-color: #343a40;
+}
+
+input::placeholder {
+    font-family: monospace;
+}
+
+label {
+    color: black;
+    font-size: 19px;
+    margin-top: 10px;
+    font-family: roboto;
+}
+
+input:focus {
+    box-shadow: 1px 1px 4px rgb(109, 106, 106);
 }
 
 
 /*----For-responsive design-----*/
-@media (max-width:1280px){
-	#container {
-		width: 90%;
-		height: 304px;
-		background-color: #f8f9fa;
-		/* margin: 24px 400px; */
-		padding: 16px 15px;
-	}
-    .parent {
-		height: 270px;
-	}
-	input[type="text"], input[type="Password"] {
-	padding: 9px;		
-	width: 93%;
-	}
-}
 
-@media (max-width:320px){
+@media (max-width:1280px) {
     #container {
-		width: 100%;
-		height: 304px;
-		background-color: #f8f9fa;
-		/* margin: 24px 400px; */
-		padding: 16px 15px;
-	}
-	.parent {
-		width: 100%;
-	}
-	.submit{
-	padding: 2px ;
-	text-align: center;
-	}
-	
-	input[type="text"], input[type="Password"] {
-	padding: 6px;
-	margin: 9px 0px;
-	width: 100%;
-	}
-	
+        width: 90%;
+        height: 304px;
+        background-color: #f8f9fa;
+        /* margin: 24px 400px; */
+        padding: 16px 15px;
+    }
+    .parent {
+        height: 270px;
+    }
+    input[type="text"],
+    input[type="Password"] {
+        padding: 9px;
+        width: 93%;
+    }
 }
 
-
-
-
-
-
-
-
-
+@media (max-width:320px) {
+    #container {
+        width: 100%;
+        height: 304px;
+        background-color: #f8f9fa;
+        /* margin: 24px 400px; */
+        padding: 16px 15px;
+    }
+    .parent {
+        width: 100%;
+    }
+    .submit {
+        padding: 2px;
+        text-align: center;
+    }
+    input[type="text"],
+    input[type="Password"] {
+        padding: 6px;
+        margin: 9px 0px;
+        width: 100%;
+    }
+}
